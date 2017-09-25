@@ -1,107 +1,679 @@
-/*top栏*/
-.top-bar{
-    height:50px;
-    line-height:50px;
-    background-color: #023894;
-    color:#ffffff;
-
-}
-.top-bar ul,.top-bar li{
-    list-style: none;
-}
-.top-bar .lang-change{
-    float: left;
-}
-.top-bar  a{
-    color:#ffffff;
-}
-.top-bar .lang-change span{
-    font-size:14px;
-    padding:0px 5px;
-}
-.top-bar .fn-content{
-    float:right;
-}
-.top-bar .fn-content a {
-    font-size: 16px;
-}
-.top-bar .fn-content li{
-    float:left;
-}
-.top-bar .fn-content .text-item{
-    padding: 0px 10px;
-}
-.top-bar .fn-content .icon-item i{
-    display: inline-block;
-    margin:0px 8px;
-    vertical-align: middle;
-    cursor: pointer;
-}
-.top-bar .weChat-icon{
-    width: 31px;
-    height: 27px;
-    background: url("../img/wechat.png");
-}
-.top-bar .email-icon{
-    width: 30px;
-    height: 19px;
-    background:url("../img/email.png");
-}
-.top-bar .ie-icon{
-    width: 26px;
-    height: 25px;
-    background: url("../img/ie.png");
-}
-/*导航栏*/
-.nav-bar{
-    height:186px;
-    background-color: #ffffff;
-}
-.nav-bar .logo-content{
-    display: inline-block;
-    width: 300px;
-    height: 186px;
-    margin-left: -120px;
-}
-.nav-bar .logo-content .logo-box{
-    width: 300px;
-    height: 186px;
-    cursor: pointer;
-    margin-top:27px;
-    display: inline-block;
-    text-align: left;
-}
-.nav-bar .logo-content .logo{
-    width: 300px;
-    height: 131px;
-    display: inline-block;
-    background:url("../img/logo.png");
-}
-.nav-bar .nav-content{
-    float: right;
-    display: inline-block;
-    width: 880px;
-    height:186px;
-}
-.nav-bar .nav-content li{
-    float: left;
-    display: inline-block;
-}
-.nav-bar .nav-content .cn-title{
-    font-size:21px;
-    color: #023894;
-}
-.nav-bar .nav-content .en-title{
-    font-size:13px;
-    color:#6f6f6f;
-    word-wrap:break-word;
-}
+/* 首页 */
 
 
-.banner-content{
+/*轮播图*/
+
+.banner-content {
     width: 100%;
-    height:646px;
+    height: 520px;
 }
-.banner-content .swiper-container{
-    height:100%;
+
+.banner-content .swiper-container {
+    height: 100%;
+    width: 100%;
+}
+
+.banner-content img {
+    text-align: center;
+}
+
+
+
+/*最新推荐*/
+
+.rec-content {
+    background-color: #023894;
+    height: 500px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.rec-content header {
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    line-height: 78px;
+    padding-top: 4px;
+}
+
+.rec-content header span {
+    padding-left: 18px;
+    font-family: DINReg;
+}
+
+.rec-content .rec-items {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    -khtml-display: flex;
+    display: flex;
+}
+
+.rec-content .rec-items .rec-item {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    -khtml-flex: 1;
+    flex: 1;
+    margin: 0px 12px;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.rec-content .rec-items h3 {
+
+    padding-bottom: 18px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding: 30px 30px 20px;
+    font-family: heijian;
+}
+
+.rec-content h3 img {
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+.rec-content .rec-item-main {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0px 30px;
+}
+
+.rec-content .rec-item-more {
+    font-size: 13px;
+    text-align: right;
+    line-height: 18px;
+    padding-right: 30px;
+}
+
+.rec-content .rec-item-more a {
+    font-size: 13px;
+    color: #282828;
+    cursor: pointer;
+}
+
+.rec-content .text-content {
+    height: 190px;
+    width: 100%;
+    width: 100%;
+}
+
+.rec-content .img-content {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.rec-content .img-content img {
+    width: 100%;
+    height: 200px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+.rec-content .img-content img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+
+/*友情链接*/
+
+.follow-us {
+    text-align: center;
+    height: 200px;
+}
+
+.follow-us header {
+    color: #023894;
+    text-align: center;
+    font-size: 22px;
+    margin: 24px 0px;
+    font-family: heijian;
+}
+
+.follow-us header span {
+    padding-left: 18px;
+    font-family: DINReg;
+}
+
+.follow-us .follow-items {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.follow-us .follow-items li {
+    display: inline-block;
+    padding: 0px 40px;
+    height: 84px;
+}
+
+.follow-us .follow-items li a {
+    display: inline-block;
+    height: 84px;
+}
+
+.follow-us .follow-items span {
+    display: inline-block;
+}
+
+.follow-us .follow-items .follow-img {
+    height: 84px;
+}
+
+.follow-us .follow-items .follow-text {
+    color: #023894;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    height: 88px;
+    width: 80px;
+    vertical-align: middle;
+    text-align: left;
+    font-family: heijian;
+    margin-left: 4px;
+    margin-top: -4px;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #d792be;
+}
+
+
+
+/* 首页 */
+
+
+/* 创始人说 */
+
+.founder {
+    background-color: #fafafa;
+    padding-bottom: 10px;
+}
+
+.founder .img-content {
+    display: block;
+    height: 518px;
+    margin-bottom: 40px;
+}
+
+.founder .img-content img {
+    float: right;
+}
+
+.founder p {
+    text-indent: 2em;
+    font-size: 16px;
+    font-family: heijian;
+    color: #434343;
+    line-height: 30px;
+}
+
+.founder .founder-signature {
+    text-align: right;
+    margin: 20px 0px;
+}
+
+.founder .founder-signature span {
+    display: inline-block;
+    height: 100px;
+    color: #023894;
+    font-size: 22px;
+    font-family: heijian;
+}
+
+.founder .founder-signature img {
+    vertical-align: middle;
+    margin-top: -20px;
+}
+
+
+
+/* 集团简介 */
+
+.group-profile {
+    background-color: #fafafa;
+    padding-bottom: 10px;
+}
+
+.group-profile p.right-top-title {
+    line-height: 36px;
+    font-size: 18px;
+    color: #023894;
+    font-family: heijian;
+    text-indent: 2em;
+}
+
+.group-profile p.right-top-title span {
+    color: #df8dba;
+    font-size: 20px;
+    font-family: heijian;
+}
+
+.group-profile .right-top-pic {
+    width: 950px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.group-profile .profile-item {}
+
+.group-profile hr {
+    margin: 30px 0px;
+}
+
+.group-profile .profile-item header {
+    font-size: 20px;
+    color: #df8dba;
+    padding-bottom: 18px;
+}
+
+.group-profile .profile-item:nth-child(even) .text-content {
+    float: right;
+    width: 440px;
+}
+
+.group-profile .profile-item:nth-child(odd) .text-content {
+    float: left;
+    width: 440px;
+}
+
+.group-profile .profile-item .text-content ul {
+    padding-right: 10px;
+}
+
+.group-profile .profile-item .text-content li {
+    font-size: 13px;
+    font-family: heijian;
+    line-height: 24px;
+    color: #434343;
+}
+
+.group-profile .profile-item:nth-child(even) .pic-content {
+    float: left;
+    width: 490px;
+    margin-top: 22px;
+}
+
+.group-profile .profile-item:nth-child(odd) .pic-content {
+    float: right;
+    width: 490px;
+    margin-top: 36px;
+}
+
+.group-profile .profile-item .pic-content img {
+    width: 100%;
+}
+
+
+
+/* 教育理念 */
+
+.education-idea {
+    background-color: #fafafa;
+    padding-bottom: 10px;
+}
+
+.education-idea .right-content {
+    padding-left: 280px;
+}
+
+.education-idea .main-ul {}
+
+.education-idea .main-ul li {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.education-idea li:nth-child(even) .text-content {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    width: 400px;
+    padding-right: 20px;
+}
+
+.education-idea li:nth-child(odd) .text-content {
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    float: left;
+    width: 400px;
+}
+
+.education-idea li:nth-child(even) .pic-content {
+
+    float: left;
+    width: 400px;
+}
+
+.education-idea li:nth-child(odd) .pic-content {
+    float: right;
+    width: 400px;
+    padding-right: 20px;
+}
+
+.education-idea li .pic-content img {
+    width: 100%;
+}
+
+.education-idea li p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #434343;
+    font-family: heijian;
+}
+
+.education-idea li:nth-child(even) header.text-header {
+    color: #df8dba;
+    font-family: fangzheng;
+    font-size: 20px;
+    margin-left: -28px;
+    line-height: 30px;
+}
+
+.education-idea li:nth-child(odd) header.text-header {
+    color: #023894;
+    font-family: fangzheng;
+    font-size: 20px;
+    margin-left: -28px;
+    line-height: 30px;
+}
+
+.education-idea li header span {
+    font-family: DINReg;
+}
+
+
+
+/* 幼儿园 */
+
+.kingder-garten {
+    background-color: #fafafa;
+    padding-bottom: 10px;
+}
+
+.kingder-garten .main-box {
+    padding-bottom: 10px;
+}
+
+.kingder-garten .main-left {
+    float: left;
+    width: 420px;
+    padding-left: 15px;
+}
+
+.kingder-garten .main-left p {
+    text-indent: 2em;
+    font-family: heijian;
+    font-size: 15px;
+    color: #434343;
+    line-height: 30px;
+}
+
+.kingder-garten .main-left header {
+    font-family: fangzheng;
+    color: #434343;
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.kingder-garten .main-left div.text {
+    color: #434343;
+    font-family: heijian;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.kingder-garten .main-left .connect-info {
+    margin-top: 70px;
+}
+
+.kingder-garten .main-left .connect-info>div,
+.kingder-garten .main-left .connect-info span,
+.kingder-garten .main-left .connect-info>div a {
+    line-height: 30px;
+    font-size: 15px;
+    font-family: heijian;
+    color: #434343;
+}
+
+
+.kingder-garten .main-right {
+    float: right;
+    width: 450px;
+}
+
+.kingder-garten .main-right img {
+    margin-bottom: 10px;
+}
+
+.kingder-garten .main-right .buttons {
+    margin-top: 90px;
+}
+
+.kingder-garten .main-right .buttons a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.kingder-garten .garten-web,
+.kingder-garten .appointment-btn {
+    width: 120px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.kingder-garten .garten-web {
+    background: #023894;
+}
+
+.kingder-garten .garten-web a,
+.kingder-garten .appointment-btn a {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "heijian"
+}
+
+.kingder-garten .appointment-btn {
+    background: #e7afce;
+}
+
+.kingder-garten.main-content .right-content {
+    padding-bottom: 10px;
+}
+
+.main-bottom {
+    height: 74px;
+    width: 95%;
+    background-color: #023894;
+    line-height: 74px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.main-bottom .qc-img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    padding-top: 2px;
+    padding-left: 2px;
+    display: inline-block;
+}
+
+.main-bottom img {
+    width: 70px;
+}
+
+.main-bottom .text-content {
+    float: left;
+    padding-left: 70px;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'heijian';
+}
+
+
+
+
+/* 培训报名 */
+
+
+/* 预约参观 */
+
+.training-reg,
+.appointment {
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.training-reg .form-content,
+.appointment .form-content {
+    padding-left: 20px;
+}
+
+.training-reg .form-content .form-item,
+.appointment .form-content .form-item {
+    margin-bottom: 20px;
+}
+
+.training-reg .form-item .label,
+.appointment .form-item .label-title {
+    font-size: 16px;
+    font-family: 'heijian';
+    padding-right: 12px;
+    color: #434343;
+}
+
+.training-reg .form-item input,
+.appointment .form-item input {
+    width: 284px;
+    height: 44px;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    padding-left: 16px;
+}
+
+.training-reg .form-item i,
+.appointment .form-item i {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.training-reg .warning-text,
+.appointment .warning-text {
+    padding-left: 84px;
+    font-family: 'heijian';
+    font-size: 16px;
+    color: #e7afce;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.training-reg .submit-btn,
+.appointment .submit-btn {
+    cursor: pointer;
+    background-color: #e7afce;
+    width: 120px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "heijian";
+    margin-left: 84px;
+}
+
+.appointment .submit-btn {
+    background-color: #b4c4e3;
+}
+
+.appointment textarea {
+    top: 30px;
+    height: 90px;
+    width: 718px;
+    resize: none;
+    font-size: 16px;
+    border: 1px solid #e6e6e6;
+    padding: 5px 16px;
+    line-height: 24px;
+}
+
+.appointment .right-content {
+    padding-bottom: 10px;
+}
+
+
+
+/* 感统音乐 */
+
+.sence-music {
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.sence-music .right-content {
+    padding-bottom: 10px;
+}
+
+.sence-music p {
+    text-indent: 2em;
+    font-size: 15px;
+    font-family: heijian;
+    color: #434343;
+    line-height: 28px;
+}
+
+.sence-music .text-content {
+    padding: 0px 15px;
+    margin-top: 20px;
+}
+
+.sence-music .right-content>img {
+    margin-top: 20px;
+    width: 85%;
+    margin-left: 48px;
+}
+
+.sence-music .qc-img {
+    margin-left: 50px;
+}
+
+.sence-music .main-bottom {
+    width: 60%;
+    border-radius: 37px 37px;
+    margin: 20px auto;
+}
+
+.sence-music .main-bottom span.text-content {
+    display: inline-block;
+    height: 70px;
+    width: 350px;
+    line-height: 22px;
+    margin-left: 25px;
+    font-family: 'heijian';
 }

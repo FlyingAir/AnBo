@@ -1,67 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>安柏教育</title>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/swiper-3.4.2.min.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    #arrows {
+        display: none;
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .right-arrow,
+    .left-arrow {
+        height: 100%;
+    }
+
+    .right-arrow {
+        float: left;
+    }
+
+    .left-arrow {
+        float: right;
+    }
+
+    .main-img {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+        width: 100%;
+        min-width: 1200px;
+    }
+    </style>
 </head>
+
 <body>
-<div class="top-bar">
-    <div class="wrap">
-        <div class="lang-change">
-            <span class="lang-cn"><a href="">中文</a></span>
-            <span> / </span>
-            <span class="lang-en"><a href="">English</a></span>
-        </div>
-        <ul class="fn-content">
-            <li class="text-item"><a href="">收藏此页</a></li>
-            <li class="text-item"><a href="">联系我们</a></li>
-            <li class="icon-item"><i class="weChat-icon"></i></li>
-            <li class="icon-item"><i class="email-icon"></i></li>
-            <li class="icon-item"><i class="ie-icon"></i></li>
-        </ul>
+    <img src="../img/main.gif" alt="" class="main-img">
+    <div id="arrows">
+        <div class="right-arrow"><img src="../img/rightArr.png" alt="" height="40%;visibility:hidden"></div>
+        <div class="left-arrow"><img src="../img/leftArr.png" alt="" height="40%;visibility:hidden;"></div>
     </div>
-</div>
-<div class="nav-bar">
-    <div class="wrap">
-        <div class="logo-content">
-            <a href="#" class="logo-box">
-                <span class="logo"></span>
-            </a>
-        </div>
-        <ul class="nav-content">
-            <li><span class="cn-title">安柏教育</span><br><span class="en-title">Amber Education  Group</span></li>
-            <li><span class="cn-title">长江0-3岁科学育儿国际研究院</span><br><span class="en-title">Amber International Early Childhood  Education Research Institute</span>
-            </li>
-            <li><span class="cn-title">高端幼儿园</span><br><span class="en-title">Amber Kindergarten</span></li>
-            <li><span class="cn-title">培训学校</span><br><span class="en-title">Training School</span></li>
-        </ul>
-    </div>
-</div>
-<div class="banner-content">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../img/banner01.png" alt=""></div>
-            <div class="swiper-slide"><img src="../img/banner02.png" alt=""></div>
-            <div class="swiper-slide"><img src="../img/banner01.png" alt=""></div>
-            <div class="swiper-slide"><img src="../img/banner02.png" alt=""></div>
-
-        </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- 如果需要滚动条 -->
-        <div class="swiper-scrollbar"></div>
-    </div>
-</div>
 </body>
 <script src="../js/jquery-1.11.1.min.js"></script>
-<script src="../js/swiper-jquery.min.js"></script>
-<script src="../js/index.js"></script>
+<script>
+$(function() {
+    $('.main-img').load(function() {
+        console.log('load')
+        var width = $(window).width();
+        if (width > 1200) {
+            $('#arrows').css({
+                'width': width * 240 / 1920 + 'px',
+                'height': width * 84 / 1920 + 'px',
+                'lineHeight': width * 100 / 1920 + 'px',
+
+                'left': width * 830 / 1920 + 'px',
+                'top': width * 855 / 1920 + 'px'
+            });
+        } else {
+            $('#arrows').css({
+                'width': 1200 * 240 / 1920 + 'px',
+                'height': 1200 * 84 / 1920 + 'px',
+                'lineHeight': 1200 * 100 / 1920 + 'px',
+
+                'left': 1200 * 830 / 1920 + 'px',
+                'top': 1200 * 855 / 1920 + 'px'
+            });
+        }
+        setTimeout(function() {
+            $('#arrows').show(0, function() {
+                var timer = null; //定义时间器  
+                var i = 0;
+                clearInterval(timer); //先清空时间器  
+                timer = setInterval(function() {
+                    $('#arrows img').css("visibility", i++ % 2 ? "hidden" : "visible") // 有规律的控制div的展示与隐藏  
+                }, 500);
+            });
+        }, 4000)
+    });
+
+
+    $(window).resize(function(event) {
+        var width = $(window).width();
+        if (width > 1200) {
+            $('#arrows').css({
+                'width': width * 240 / 1920 + 'px',
+                'height': width * 84 / 1920 + 'px',
+                'lineHeight': width * 100 / 1920 + 'px',
+
+                'left': width * 830 / 1920 + 'px',
+                'top': width * 855 / 1920 + 'px'
+            });
+        } else {
+            $('#arrows').css({
+                'width': 1200 * 240 / 1920 + 'px',
+                'height': 1200 * 84 / 1920 + 'px',
+                'lineHeight': 1200 * 100 / 1920 + 'px',
+
+                'left': 1200 * 830 / 1920 + 'px',
+                'top': 1200 * 855 / 1920 + 'px'
+            });
+        }
+    });
+    $('#arrows').click(function() {
+        window.location = './indexmain.html'
+    })
+})
+</script>
+
 </html>
