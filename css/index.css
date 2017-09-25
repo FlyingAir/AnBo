@@ -19,6 +19,7 @@
 
 
 
+
 /*最新推荐*/
 
 .rec-content {
@@ -131,6 +132,7 @@
 
 
 
+
 /*友情链接*/
 
 .follow-us {
@@ -200,6 +202,7 @@
 
 
 
+
 /* 首页 */
 
 
@@ -245,6 +248,7 @@
     vertical-align: middle;
     margin-top: -20px;
 }
+
 
 
 
@@ -326,6 +330,7 @@
 
 
 
+
 /* 教育理念 */
 
 .education-idea {
@@ -402,6 +407,7 @@
 .education-idea li header span {
     font-family: DINReg;
 }
+
 
 
 
@@ -539,6 +545,7 @@
 
 
 
+
 /* 培训报名 */
 
 
@@ -629,6 +636,7 @@
 
 
 
+
 /* 感统音乐 */
 
 .sence-music {
@@ -648,7 +656,7 @@
     line-height: 28px;
 }
 
-.sence-music .text-content {
+.sence-music .text-content ,.secientific .text-content {
     padding: 0px 15px;
     margin-top: 20px;
 }
@@ -659,21 +667,61 @@
     margin-left: 48px;
 }
 
-.sence-music .qc-img {
+.sence-music .qc-img,.secientific .qc-img{
     margin-left: 50px;
 }
 
-.sence-music .main-bottom {
+.sence-music .main-bottom,.secientific .main-bottom{
     width: 60%;
     border-radius: 37px 37px;
     margin: 20px auto;
 }
 
-.sence-music .main-bottom span.text-content {
+.sence-music .main-bottom span.text-content ,.secientific .main-bottom span.text-content {
     display: inline-block;
     height: 70px;
     width: 350px;
     line-height: 22px;
     margin-left: 25px;
     font-family: 'heijian';
+}
+
+
+/* 科学育儿教程 */
+
+.secientific {
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.secientific .audio-left {
+    float: left;
+    width: 600px;
+}
+.secientific .audio-left header{
+    font-size: 16px;
+    font-family: heijian;
+    color: #434343;
+    font-weight: 600;
+    padding-left: 32px;
+}
+.secientific .audio-left p {
+    text-indent: 2em;
+    font-size: 15px;
+    font-family: heijian;
+    color: #434343;
+    line-height: 28px;
+}
+.secientific .audio-left audio {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.secientific .audio-right {
+    float: right;
+}
+
+.secientific .audio-right img {
+    width: 90%;
+    margin-top: 30px;
 }
