@@ -20,6 +20,10 @@
 
 
 
+
+
+
+
 /*最新推荐*/
 
 .rec-content {
@@ -133,6 +137,10 @@
 
 
 
+
+
+
+
 /*友情链接*/
 
 .follow-us {
@@ -203,6 +211,10 @@
 
 
 
+
+
+
+
 /* 首页 */
 
 
@@ -248,6 +260,10 @@
     vertical-align: middle;
     margin-top: -20px;
 }
+
+
+
+
 
 
 
@@ -310,6 +326,7 @@
     font-family: heijian;
     line-height: 24px;
     color: #434343;
+    text-align: justify;
 }
 
 .group-profile .profile-item:nth-child(even) .pic-content {
@@ -327,6 +344,10 @@
 .group-profile .profile-item .pic-content img {
     width: 100%;
 }
+
+
+
+
 
 
 
@@ -411,9 +432,14 @@
 
 
 
+
+
+
+
 /* 幼儿园 */
 
-.kingder-garten {
+.kingder-garten,
+.adult-training {
     background-color: #fafafa;
     padding-bottom: 10px;
 }
@@ -422,13 +448,15 @@
     padding-bottom: 10px;
 }
 
-.kingder-garten .main-left {
+.kingder-garten .main-left,
+.adult-training .main-left {
     float: left;
     width: 420px;
     padding-left: 15px;
 }
 
-.kingder-garten .main-left p {
+.kingder-garten .main-left p,
+.adult-training .main-left p {
     text-indent: 2em;
     font-family: heijian;
     font-size: 15px;
@@ -455,9 +483,14 @@
     margin-top: 70px;
 }
 
-.kingder-garten .main-left .connect-info>div,
+.adult-training .main-left .connect-info {
+    margin-top: 150px;
+}
+
 .kingder-garten .main-left .connect-info span,
-.kingder-garten .main-left .connect-info>div a {
+.kingder-garten .main-left .connect-info>div a,
+.adult-training .main-left .connect-info span,
+.adult-training .main-left .connect-info>div a {
     line-height: 30px;
     font-size: 15px;
     font-family: heijian;
@@ -470,7 +503,18 @@
     width: 450px;
 }
 
-.kingder-garten .main-right img {
+.adult-training .main-right {
+    float: right;
+    width: 450px;
+}
+
+.adult-training .main-right img {
+    width: 450px;
+    height: 400px;
+}
+
+.kingder-garten .main-right img,
+.adult-training .main-right img {
     margin-bottom: 10px;
 }
 
@@ -478,19 +522,26 @@
     margin-top: 90px;
 }
 
-.kingder-garten .main-right .buttons a {
+.adult-training .main-right .buttons {
+    margin-top: 68px;
+}
+
+.kingder-garten .main-right .buttons a,
+.adult-training .main-right .buttons a {
     display: block;
     width: 100%;
     height: 100%;
 }
 
 .kingder-garten .garten-web,
-.kingder-garten .appointment-btn {
+.kingder-garten .appointment-btn,
+.adult-training .training-reg-btn {
     width: 120px;
     height: 44px;
     line-height: 44px;
     padding-left: 15px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .kingder-garten .garten-web {
@@ -498,17 +549,20 @@
 }
 
 .kingder-garten .garten-web a,
-.kingder-garten .appointment-btn a {
+.kingder-garten .appointment-btn a,
+.adult-training .training-reg-btn a {
     color: #ffffff;
     font-size: 16px;
     font-family: "heijian"
 }
 
-.kingder-garten .appointment-btn {
+.kingder-garten .appointment-btn,
+.adult-training .training-reg-btn {
     background: #e7afce;
 }
 
-.kingder-garten.main-content .right-content {
+.kingder-garten.main-content .right-content,
+.adult-training .main-content .right-content {
     padding-bottom: 10px;
 }
 
@@ -541,6 +595,10 @@
     font-size: 15px;
     font-family: 'heijian';
 }
+
+
+
+
 
 
 
@@ -637,6 +695,10 @@
 
 
 
+
+
+
+
 /* 感统音乐 */
 
 .sence-music {
@@ -656,7 +718,9 @@
     line-height: 28px;
 }
 
-.sence-music .text-content ,.secientific .text-content {
+.sence-music .text-content,
+.secientific .text-content ,
+.books .main-bottom .text-content{
     padding: 0px 15px;
     margin-top: 20px;
 }
@@ -667,17 +731,23 @@
     margin-left: 48px;
 }
 
-.sence-music .qc-img,.secientific .qc-img{
+.sence-music .qc-img,
+.secientific .qc-img ,
+.books .qc-img{
     margin-left: 50px;
 }
 
-.sence-music .main-bottom,.secientific .main-bottom{
+.sence-music .main-bottom,
+.secientific .main-bottom ,
+.books .main-bottom{
     width: 60%;
     border-radius: 37px 37px;
     margin: 20px auto;
 }
 
-.sence-music .main-bottom span.text-content ,.secientific .main-bottom span.text-content {
+.sence-music .main-bottom span.text-content,
+.secientific .main-bottom span.text-content ,
+.books .main-bottom span.text-content{
     display: inline-block;
     height: 70px;
     width: 350px;
@@ -685,6 +755,10 @@
     margin-left: 25px;
     font-family: 'heijian';
 }
+
+
+
+
 
 
 /* 科学育儿教程 */
@@ -698,13 +772,15 @@
     float: left;
     width: 600px;
 }
-.secientific .audio-left header{
+
+.secientific .audio-left header {
     font-size: 16px;
     font-family: heijian;
     color: #434343;
     font-weight: 600;
     padding-left: 32px;
 }
+
 .secientific .audio-left p {
     text-indent: 2em;
     font-size: 15px;
@@ -712,11 +788,13 @@
     color: #434343;
     line-height: 28px;
 }
+
 .secientific .audio-left audio {
     width: 100%;
     margin-bottom: 30px;
     margin-top: 20px;
 }
+
 .secientific .audio-right {
     float: right;
 }
@@ -725,3 +803,91 @@
     width: 90%;
     margin-top: 30px;
 }
+
+
+
+
+
+/* 育儿书籍推荐 */
+
+.books {
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.books .books-content {}
+
+.books .books-item {
+    width: 33.3%;
+    height: 740px;
+    float: left;
+}
+
+.books .books-item .img-content {
+    text-align: center;
+}
+
+.books .books-item .img-content img {
+    width: 200px;
+}
+
+.books .main-text-content {
+    position: relative;
+    width: 220px;
+    margin: 0 auto;
+    height: 350px;
+    overflow: hidden;
+}
+
+.books .book-name {
+    color: #023894;
+    font-size: 19px;
+    font-family: 'heijian';
+    text-align: center;
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding: 0px 30px;
+    height: 40px;
+}
+
+
+
+.books .text-content p,
+.books .books-item span {
+    font-size: 13px;
+    font-family: 'heijian';
+    color: #434343;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align:justify；
+}
+
+.books .text-content p {
+    text-indent: 2em;
+}
+.books .books-item span {
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.books .more-btn {
+    margin-right: 50px;
+    margin-top: 6px;
+    float: right;
+    width: 90px;
+    background: #df8dba;
+    height: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px; 
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+.books hr{
+   margin:0px 50px 15px;
+}
+
+
+

@@ -1,0 +1,136 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(255 ,255, 255, .65);
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.reveal-modal {
+    visibility: hidden;
+    top: 100px;
+    left: 50%;
+    margin-left: -360px;
+    width: 800px;
+    background: #eee url(modal-gloss.png) no-repeat -200px -80px;
+    position: absolute;
+    z-index: 101;
+    padding: 30px 40px 34px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    -box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+}
+
+.reveal-modal.small {
+    width: 200px;
+    margin-left: -140px;
+}
+
+.reveal-modal.medium {
+    width: 400px;
+    margin-left: -240px;
+}
+
+.reveal-modal.large {
+    width: 600px;
+    margin-left: -340px;
+}
+
+.reveal-modal.xlarge {
+    width: 800px;
+    margin-left: -440px;
+}
+
+.reveal-modal .close-reveal-modal {
+    font-size: 22px;
+    line-height: .5;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    color: #aaa;
+    text-shadow: 0 -1px 1px rbga(0, 0, 0, .6);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reveal-modal .left {
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.reveal-modal .left img {}
+
+.reveal-modal .left .book-name {
+    color: #023894;
+    font-size: 19px;
+    font-family: 'heijian';
+    text-align: center;
+    line-height: 60px;
+	
+    height: 60px;
+}
+
+
+.reveal-modal .right {}
+
+.reveal-modal .right header {
+    font-size: 18px;
+    color: #df8dba;
+    font-family: 'heijian';
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+
+.reveal-modal .right p {
+    text-indent: 2em;
+    font-size: 13px;
+    font-family: 'heijian';
+    color: #434343;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: justify；
+}
+
+.reveal-modal .main-bottom {
+    position: absolute;
+    left: 50%;
+
+    bottom: -74px;
+    width: 576px;
+    border-radius: 37px 37px;
+    margin-left: -288px;
+}
+
+.reveal-model .reveal-content {
+    position: relative;
+}
+
+.reveal-modal .qc-img {
+    margin-left: 50px;
+}
+
+.reveal-modal .main-bottom .text-content {
+    padding: 0px 15px;
+    margin-top: 20px;
+}
+
+.reveal-modal .main-bottom span.text-content {
+    display: inline-block;
+    height: 70px;
+    width: 350px;
+    line-height: 22px;
+    margin-left: 25px;
+    font-family: 'heijian';
+}

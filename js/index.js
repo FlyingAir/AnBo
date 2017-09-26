@@ -11,7 +11,6 @@ $(function() {
             return this;
         }
     });
-
     //侧边栏hover
     $('.main-content .left-bar li ').hover(function() {
         $(this).addClass('hover').siblings().attr('id', 'no-hover')
@@ -52,6 +51,12 @@ $(function() {
         pagination: '.swiper-pagination',
         paginationClickable: true,
     });
+    //回到顶部
+    $(".back-to-top").click(function () {
+        var speed=700;//滑动的速度
+        $('body,html').animate({ scrollTop: 0 }, speed);
+        return false;
+ });
     // 导航hover效果
     $(".nav-content > li").hover(function() {
 

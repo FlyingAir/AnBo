@@ -869,7 +869,9 @@ a {
     zoom: 1;
 }
 
-
+p{
+    text-align: justify;
+}
 
 
 
@@ -1593,6 +1595,6 @@ a {
 }
 
 
-.swiper-slide{
+.swiper-slide,.back-to-top{
     cursor: pointer;
 }
