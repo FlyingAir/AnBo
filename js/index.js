@@ -52,11 +52,11 @@ $(function() {
         paginationClickable: true,
     });
     //回到顶部
-    $(".back-to-top").click(function () {
-        var speed=700;//滑动的速度
+    $(".back-to-top").click(function() {
+        var speed = 700; //滑动的速度
         $('body,html').animate({ scrollTop: 0 }, speed);
         return false;
- });
+    });
     // 导航hover效果
     $(".nav-content > li").hover(function() {
 
@@ -92,5 +92,28 @@ $(function() {
             .find("a")
             .removeClass("hover");
 
+    });
+
+    function AddFavorite(title, url) {
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                swal("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D 或者Command+D 进行添加")
+                        .then((value) => {});
+            }
+        }
+    }
+    $('.add-fav').click(function(event) {
+        AddFavorite("www.baidu.com", '')
+    });
+
+    $('.qc-content').hover(function() {
+        $(this).find('div').show(200)
+    }, function() {
+        $(this).find('div').hide(200)
+        /* Stuff to do when the mouse leaves the element */
     });
 })

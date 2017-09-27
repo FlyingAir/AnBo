@@ -24,6 +24,8 @@
 
 
 
+
+
 /*最新推荐*/
 
 .rec-content {
@@ -141,6 +143,8 @@
 
 
 
+
+
 /*友情链接*/
 
 .follow-us {
@@ -215,6 +219,8 @@
 
 
 
+
+
 /* 首页 */
 
 
@@ -260,6 +266,8 @@
     vertical-align: middle;
     margin-top: -20px;
 }
+
+
 
 
 
@@ -352,6 +360,8 @@
 
 
 
+
+
 /* 教育理念 */
 
 .education-idea {
@@ -436,6 +446,8 @@
 
 
 
+
+
 /* 幼儿园 */
 
 .kingder-garten,
@@ -451,7 +463,7 @@
 .kingder-garten .main-left,
 .adult-training .main-left {
     float: left;
-    width: 420px;
+    width: 440px;
     padding-left: 15px;
 }
 
@@ -462,6 +474,10 @@
     font-size: 15px;
     color: #434343;
     line-height: 30px;
+}
+
+.adult-training .main-left p {
+    line-height: 38px;
 }
 
 .kingder-garten .main-left header {
@@ -480,11 +496,11 @@
 }
 
 .kingder-garten .main-left .connect-info {
-    margin-top: 70px;
+    margin-top: 96px;
 }
 
 .adult-training .main-left .connect-info {
-    margin-top: 150px;
+    margin-top: 66px;
 }
 
 .kingder-garten .main-left .connect-info span,
@@ -509,8 +525,8 @@
 }
 
 .adult-training .main-right img {
-    width: 450px;
-    height: 400px;
+    width: 440px;
+    height: 380px;
 }
 
 .kingder-garten .main-right img,
@@ -523,7 +539,7 @@
 }
 
 .adult-training .main-right .buttons {
-    margin-top: 68px;
+    margin-top: 104px;
 }
 
 .kingder-garten .main-right .buttons a,
@@ -595,6 +611,8 @@
     font-size: 15px;
     font-family: 'heijian';
 }
+
+
 
 
 
@@ -699,6 +717,8 @@
 
 
 
+
+
 /* 感统音乐 */
 
 .sence-music {
@@ -719,8 +739,8 @@
 }
 
 .sence-music .text-content,
-.secientific .text-content ,
-.books .main-bottom .text-content{
+.secientific .text-content,
+.books .main-bottom .text-content {
     padding: 0px 15px;
     margin-top: 20px;
 }
@@ -732,22 +752,22 @@
 }
 
 .sence-music .qc-img,
-.secientific .qc-img ,
-.books .qc-img{
+.secientific .qc-img,
+.books .qc-img {
     margin-left: 50px;
 }
 
 .sence-music .main-bottom,
-.secientific .main-bottom ,
-.books .main-bottom{
+.secientific .main-bottom,
+.books .main-bottom {
     width: 60%;
     border-radius: 37px 37px;
     margin: 20px auto;
 }
 
 .sence-music .main-bottom span.text-content,
-.secientific .main-bottom span.text-content ,
-.books .main-bottom span.text-content{
+.secientific .main-bottom span.text-content,
+.books .main-bottom span.text-content {
     display: inline-block;
     height: 70px;
     width: 350px;
@@ -755,6 +775,8 @@
     margin-left: 25px;
     font-family: 'heijian';
 }
+
+
 
 
 
@@ -803,6 +825,8 @@
     width: 90%;
     margin-top: 30px;
 }
+
+
 
 
 
@@ -860,12 +884,13 @@
     color: #434343;
     line-height: 22px;
     letter-spacing: 0;
-    text-align:justify；
+    text-align: justify；
 }
 
 .books .text-content p {
     text-indent: 2em;
 }
+
 .books .books-item span {
     display: inline-block;
     margin-bottom: 14px;
@@ -881,13 +906,89 @@
     color: #ffffff;
     font-size: 14px;
     text-align: center;
-    line-height: 20px; 
+    line-height: 20px;
     border-radius: 10px 10px;
     cursor: pointer;
 }
-.books hr{
-   margin:0px 50px 15px;
+
+.books hr {
+    margin: 0px 50px 15px;
 }
 
 
 
+/* 联系我们 */
+
+.contact-us {
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}
+
+.contact-us .sh-center {}
+
+.contact-us .sh-center ul {}
+
+.contact-us .sh-center li {
+    margin-bottom: 60px;
+}
+
+.contact-us .right-content header {
+    font-family: 'teheijian';
+    font-size: 21px;
+    color: #023894;
+    margin-bottom: 40px;
+    padding-left: 12px;
+}
+
+.contact-us .right-content h3 {
+    font-size: 18px;
+    font-family: heijian;
+    color: #df8dba;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-us .sh-center .item-logo {
+    float: left;
+    width: 210px;
+    height: 182px;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.contact-us .sh-center .item-logo img {
+    text-align: center;
+}
+
+.contact-us .sh-center .item-info {
+    float: left;
+    width: 350px;
+}
+
+.contact-us .connect-info span,
+.contact-us .connect-info a {
+    color: #434343;
+    font-family: 'heijian';
+}
+
+.contact-us hr {
+    margin: 0px 30px 40px;
+}
+
+.contact-us .sh-center .item-qc img {
+    margin-top: 22px;
+}
+
+.contact-us .propagation-unit {
+    padding-left: 25px;
+    margin-bottom: 150px;
+}
+
+.contact-us .propagation-unit h3 {
+    padding-left: 12px;
+}
+
+.contact-us .propagation-unit .connect-info>div {
+    padding-left: 8px;
+}
