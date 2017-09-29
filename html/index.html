@@ -29,6 +29,7 @@
         user-select: none;
         width: 100%;
         min-width: 1200px;
+        display: none;
     }
     </style>
 </head>
@@ -42,7 +43,7 @@
 <script>
 $(function() {
     $('.main-img').load(function() {
-        console.log('load')
+        $('.main-img').show();
         var width = $(window).width();
         if (width > 1200) {
             $('#arrows').css({
