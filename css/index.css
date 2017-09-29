@@ -426,7 +426,7 @@
 .education-idea li:nth-child(odd) .pic-content {
     float: right;
     width: 400px;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 .education-idea li .pic-content img {
