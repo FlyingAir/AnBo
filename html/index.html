@@ -14,7 +14,6 @@
     }
 
     #arrows {
-        display: none;
         vertical-align: middle;
         position: absolute;
         top: 0;
@@ -22,20 +21,6 @@
         cursor: pointer;
         z-index: 9999;
     }
-
-    .right-arrow,
-    .left-arrow {
-        height: 100%;
-    }
-
-    .right-arrow {
-        float: left;
-    }
-
-    .left-arrow {
-        float: right;
-    }
-
     .main-img {
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -49,10 +34,8 @@
 </head>
 
 <body>
-    <img src="../img/main.gif" alt="" class="main-img">
+    <img src="../img/loadingPage.gif" alt="" class="main-img">
     <div id="arrows">
-        <div class="right-arrow"><img src="../img/rightArr.png" alt="" height="40%;visibility:hidden"></div>
-        <div class="left-arrow"><img src="../img/leftArr.png" alt="" height="40%;visibility:hidden;"></div>
     </div>
 </body>
 <script src="../js/jquery-1.11.1.min.js"></script>
@@ -63,33 +46,23 @@ $(function() {
         var width = $(window).width();
         if (width > 1200) {
             $('#arrows').css({
-                'width': width * 240 / 1920 + 'px',
-                'height': width * 84 / 1920 + 'px',
+                'width': width * 260 / 1920 + 'px',
+                'height': width * 80 / 1920 + 'px',
                 'lineHeight': width * 100 / 1920 + 'px',
 
                 'left': width * 830 / 1920 + 'px',
-                'top': width * 855 / 1920 + 'px'
+                'top': width * 840 / 1920 + 'px'
             });
         } else {
             $('#arrows').css({
-                'width': 1200 * 240 / 1920 + 'px',
-                'height': 1200 * 84 / 1920 + 'px',
+                'width': 1200 * 260 / 1920 + 'px',
+                'height': 1200 * 80 / 1920 + 'px',
                 'lineHeight': 1200 * 100 / 1920 + 'px',
 
                 'left': 1200 * 830 / 1920 + 'px',
-                'top': 1200 * 855 / 1920 + 'px'
+                'top': 1200 * 840 / 1920 + 'px'
             });
         }
-        setTimeout(function() {
-            $('#arrows').show(0, function() {
-                var timer = null; //定义时间器  
-                var i = 0;
-                clearInterval(timer); //先清空时间器  
-                timer = setInterval(function() {
-                    $('#arrows img').css("visibility", i++ % 2 ? "hidden" : "visible") // 有规律的控制div的展示与隐藏  
-                }, 500);
-            });
-        }, 4000)
     });
 
 
@@ -97,21 +70,21 @@ $(function() {
         var width = $(window).width();
         if (width > 1200) {
             $('#arrows').css({
-                'width': width * 240 / 1920 + 'px',
-                'height': width * 84 / 1920 + 'px',
+                'width': width * 260 / 1920 + 'px',
+                'height': width * 80 / 1920 + 'px',
                 'lineHeight': width * 100 / 1920 + 'px',
 
                 'left': width * 830 / 1920 + 'px',
-                'top': width * 855 / 1920 + 'px'
+                'top': width * 840 / 1920 + 'px'
             });
         } else {
             $('#arrows').css({
-                'width': 1200 * 240 / 1920 + 'px',
-                'height': 1200 * 84 / 1920 + 'px',
+                'width': 1200 * 260 / 1920 + 'px',
+                'height': 1200 * 80 / 1920 + 'px',
                 'lineHeight': 1200 * 100 / 1920 + 'px',
 
                 'left': 1200 * 830 / 1920 + 'px',
-                'top': 1200 * 855 / 1920 + 'px'
+                'top': 1200 * 840 / 1920 + 'px'
             });
         }
     });

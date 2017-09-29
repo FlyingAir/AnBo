@@ -93,23 +93,6 @@ $(function() {
             .removeClass("hover");
 
     });
-
-    function AddFavorite(title, url) {
-        try {
-            window.external.addFavorite(url, title);
-        } catch (e) {
-            try {
-                window.sidebar.addPanel(title, url, "");
-            } catch (e) {
-                swal("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D 或者Command+D 进行添加")
-                        .then((value) => {});
-            }
-        }
-    }
-    $('.add-fav').click(function(event) {
-        AddFavorite("www.baidu.com", '')
-    });
-
     $('.qc-content').hover(function() {
         $(this).find('div').show(200)
     }, function() {
