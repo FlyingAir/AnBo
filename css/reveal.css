@@ -68,6 +68,7 @@
     float: left;
     text-align: center;
     margin-right: 10px;
+    width: 248px;   
 }
 
 .reveal-modal .left img {}
@@ -77,13 +78,15 @@
     font-size: 19px;
     font-family: 'heijian';
     text-align: center;
-    line-height: 60px;
-	
+    line-height: 30px;
     height: 60px;
 }
 
 
-.reveal-modal .right {}
+.reveal-modal .right {
+    float: right;
+    width: 530px;   
+}
 
 .reveal-modal .right header {
     font-size: 18px;
