@@ -21,10 +21,9 @@
                 <span class="lang-cn"><a href="">中文</a></span>
                 <span> / </span>
                 <span class="lang-en"><a href="./enIndex.html">English</a></span>
-                
             </div>
-            <ul class="fn-content">              
-                 <li class="text-item"><a href="./contactus.html">联系我们</a></li>
+            <ul class="fn-content">
+                <li class="text-item"><a href="./contactus.html">联系我们</a></li>
                 <li class="icon-item qc-content"><i class="weChat-icon"></i>
                     <div><img src="../img/link02.png" alt=""><img src="../img/link03.png" alt=""></div>
                 </li>
@@ -99,11 +98,11 @@
                         <input type="text" name='country' class="baby-country">
                         <i class="statu"></i>
                         <span class="label-title" style="padding-left: 30px;">宝宝性别</span>
-                        <div class="sewv">
+                        <div class="sewv sex">
                             <div class="sewvtop"><span>请选择..</span><em><img src="../img/selebom.png"></em></div>
                             <ul class="sewvbm">
-                                <li>男</li>
-                                <li>女</li>
+                                <li data-id="S001">男</li>
+                                <li data-id="S002">女</li>
                             </ul>
                         </div>
                         <i class="statu"></i>
@@ -125,10 +124,10 @@
                     </div>
                     <div class="form-item">
                         <span class="label-title">希望参观校区</span>
-                        <div class="sewv" style="width: 714px; ">
+                        <div class="sewv visit" style="width: 714px; ">
                             <div class="sewvtop"><span style="width: 714px; ">请选择..</span><em><img src="../img/selebom.png"></em></div>
                             <ul class="sewvbm">
-                                <li style="width: 714px; ">上海市静安区民办安蒙幼儿园</li>
+                                <li style="width: 714px;" data-id="V001">上海市静安区民办安蒙幼儿园</li>
                             </ul>
                         </div>
                         <i class="statu"></i>
@@ -174,6 +173,21 @@
 <script src="../js/index.js"></script>
 <script>
 $(function() {
+
+    var sexCode = "";
+    var visitCode = "";
+    $('.sex .sewvbm li').click(function(event) {
+        sexCode = $(this).data('id')
+
+    });
+    $('.visit .sewvbm li').click(function(event) {
+        sexCode = $(this).data('id')
+
+    });
+
+
+
+
     $('#demo-1').fdatepicker({
         format: 'yyyy-mm-dd',
     });
@@ -239,11 +253,37 @@ $(function() {
                 }
             });
             if (flag == true) {
-                console.log('success')
-                $.get('http://139.224.135.45/tp5/public/?isSend=1&toEmail=amber.montessori@amss.org.cn&emailType=0', function(data) {
-                    swal("预约成功。")
-                        .then((value) => {});
-                });
+                var url = window.location.host;
+                var postData = {
+                    babyName: $('.baby-name').val(), //宝贝姓名
+                    babyBirth: $('.baby-birth').val(), //宝贝生日
+                    babyCountry: $('.baby-country').val(), //宝贝国籍
+                    babySex: sexCode, //宝贝性别
+                    parentName: $('.parent-name').val(), //家长姓名
+                    parentTel: $('.parent-tel').val(), //家长联系电话
+                    parentMail: $('.parent-mail').val(), //家长联系邮箱
+                    hopeVisit: visitCode, //希望参观校区
+                    visitTime: $('.visit-time').val(), //希望参观时间
+                    visitReason: $('.visit-reason').val(), //参观原因
+                }
+                $.ajax({
+                        url: url + '/doAppointment',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: postData,
+                    })
+                    .done(function(json) {
+                        if (json.code == 200) {
+                            swal("预约成功。")
+                                .then((value) => {});
+                        }
+                    })
+                    .fail(function() {
+                        console.log("error");
+                    })
+                    .always(function() {
+                        console.log("complete");
+                    });
             } else {
                 var reg = /^1\d{10}$/;
                 if (!reg.test($('.parent-mail').val())) {

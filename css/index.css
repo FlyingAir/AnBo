@@ -16,7 +16,11 @@
 .banner-content img {
     text-align: center;
 }
-
+.banner-content .swiper-container .swiper-slide a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
 
 
 
